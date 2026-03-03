@@ -5,10 +5,15 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import useWindowStore from "#store/window";
 
+import useLocationStore from "#store/location";
+import { locations } from "#constants";
+
+
 const Dock = () => {
   const { openWindow, closeWindow, windows } = useWindowStore();
   const dockRef = useRef(null);
   
+  const { setActiveLocation } = useLocationStore();
 
   useGSAP(() => {
     const dock = dockRef.current;
@@ -78,25 +83,41 @@ const toggleApp = (app) => {
     window.open("https://tracalorie-app-puce.vercel.app/", "_self");
     return;
   }
-
-  // "_blank" opens in a new tab.
-  // "_self" open it in the same (current) tab
-
-
-  // 👉 NORMAL WINDOW LOGIC
-  if (!app.canOpen) return;
-
-  const win = windows[app.id];
-  if (!win) {
-    console.warn(`Window not found for app: ${app.id}`);
+  if (app.id === "news") {
+    window.open("https://rad-faloodeh-91eaca.netlify.app/", "_self");
     return;
   }
 
-  if (win.isOpen) {
-    closeWindow(app.id);
-  } else {
-    openWindow(app.id);
-  }
+
+  // 👉 NORMAL WINDOW LOGIC
+if (!app.canOpen) return;
+
+if (app.id === "finder") {
+  setActiveLocation(locations.work); // default folder for Finder
+  openWindow("finder");
+  return;
+}
+
+if (app.id === "trash") {
+  setActiveLocation(locations.trash);
+  openWindow("finder");
+  return;
+}
+
+const win = windows[app.id];
+if (!win) {
+  console.warn(`Window not found for app: ${app.id}`);
+  return;
+}
+
+if (win.isOpen) {
+  closeWindow(app.id);
+} else {
+  openWindow(app.id);
+}
+
+
+
 };
 
 

@@ -96,7 +96,14 @@ const dockApps = [
         id: "trash",
         name: "Archive", // was "Trash"
         icon: "trash.png",
-        canOpen: false,
+        canOpen: true,
+    },
+    {
+        id: "news",
+        name: "News",
+        icon: "news.png",
+        canOpen: true,
+        link: "https://rad-faloodeh-91eaca.netlify.app/",
     },
     {
         id: "currency",
@@ -540,6 +547,7 @@ const WINDOW_CONFIG = {
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     note: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     tracker: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    news: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     
 };
 
