@@ -9,12 +9,12 @@ const Calculator = () => {
   const [result, setResult] = useState("");
   const [shouldReset, setShouldReset] = useState(false);
 
-  // 🔥 Smooth Live Calculate
+  //Smooth Live Calculate
   useEffect(() => {
     try {
       const lastChar = input.slice(-1);
 
-      // 🚫 Do NOT calculate if last character is operator
+      //Do NOT calculate if last character is operator
       if (["+", "−", "×", "÷"].includes(lastChar)) {
         setResult("");
         return;
@@ -42,7 +42,7 @@ const Calculator = () => {
     }
   }, [input]);
 
-  // ⌨️ Keyboard Support
+  //Keyboard Support
   useEffect(() => {
     const handleKeyDown = (e) => {
       const key = e.key;
@@ -143,7 +143,7 @@ const Calculator = () => {
           {input}
         </div>
 
-        {/* Live Preview - Always Has Space */}
+        {/* Live Preview*/}
         <div
           className={`
       text-gray-500 text-2xl mt-2
