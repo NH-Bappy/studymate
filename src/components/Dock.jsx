@@ -67,24 +67,28 @@ const Dock = () => {
 
 const toggleApp = (app) => {
   // 👉 OPEN EXTERNAL LINK
+  if (app.link) {
+    window.open(app.link, "_blank");
+    return;
+  }
   if (app.id === "typing") {
     window.open("https://typing-game-eosin-theta.vercel.app/", "_blank");
     return;
   }
   if (app.id === "currency") {
-    window.open("https://nh-bappy.github.io/currency-converter/", "_self");
+    window.open("https://nh-bappy.github.io/currency-converter/", "_blank");
     return;
   }
   if (app.id === "note") {
-    window.open("https://studymate-note.vercel.app/", "_self");
+    window.open("https://studymate-note.vercel.app/", "_blank");
     return;
   }
   if (app.id === "tracker") {
-    window.open("https://tracalorie-app-puce.vercel.app/", "_self");
+    window.open("https://tracalorie-app-puce.vercel.app/", "_blank");
     return;
   }
   if (app.id === "news") {
-    window.open("https://rad-faloodeh-91eaca.netlify.app/", "_self");
+    window.open("https://rad-faloodeh-91eaca.netlify.app/", "_blank");
     return;
   }
 
@@ -127,23 +131,23 @@ if (win.isOpen) {
   return (
     <section id="dock">
       <div ref={dockRef} className="dock-container">
-        {dockApps.map(({ id, name, icon, canOpen }) => (
-          <div key={id} className="relative flex justify-center">
+        {dockApps.map((app) => (
+          <div key={app.id} className="relative flex justify-center">
             <button
               type="button"
               className="dock-icon"
-              aria-label={name}
+              aria-label={app.name}
               data-tooltip-id="dock-tooltip"
-              data-tooltip-content={name}
+              data-tooltip-content={app.name}
               data-tooltip-delay-show={150}
-              disabled={!canOpen}
-              onClick={() => toggleApp({ id, canOpen })}
+              disabled={!app.canOpen}
+              onClick={() => toggleApp(app)}
             >
               <img
-                src={`/images/${icon}`}
-                alt={name}
+                src={`/images/${app.icon}`}
+                alt={app.name}
                 loading="lazy"
-                className={canOpen ? "" : "opacity-60"}
+                className={app.canOpen ? "" : "opacity-60"}
               />
             </button>
           </div>
