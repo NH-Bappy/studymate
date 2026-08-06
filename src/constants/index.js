@@ -47,7 +47,7 @@ const dockApps = [
         name: "note",
         icon: "note.png",
         canOpen: true,
-        link: "https://typing-game-eosin-theta.vercel.app/",
+        link: "https://studymate-note.vercel.app/",
     },
     {
         id: "calculator",
@@ -150,48 +150,36 @@ const techStack = [
     },
     {
         category: "Dev Tools",
-        items: ["Git", "GitHub" , "Vercel", "Netlify"],
+        items: ["Git", "GitHub", "Vercel", "Netlify"],
     },
 ];
 
 const socials = [
+
     {
         id: 1,
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "https://github.com/shadman2503",
+        link: "https://github.com/NH-Bappy",
     },
     {
         id: 2,
-        text: "Github",
-        icon: "/icons/github.svg",
-        bg: "#f4656b",
-        link: "https://github.com/NH-Bappy",
+        text: "Platform",
+        icon: "/icons/atom.svg",
+        bg: "#4bcb63",
+        link: "https://jsmastery.com/",
     },
-    // {
-    //     id: 2,
-    //     text: "Platform",
-    //     icon: "/icons/atom.svg",
-    //     bg: "#4bcb63",
-    //     link: "https://jsmastery.com/",
-    // },
+
     {
         id: 3,
-        text: "Twitter/X",
-        icon: "/icons/twitter.svg",
-        bg: "#ff866b",
-        link: "https://x.com/shadman_2503",
-    },
-    {
-        id: 4,
         text: "Twitter/X",
         icon: "/icons/twitter.svg",
         bg: "#ff866b",
         link: "https://x.com/Naimul22Bappy",
     },
     {
-        id: 5,
+        id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
@@ -230,27 +218,27 @@ const photosLinks = [
 const gallery = [
     {
         id: 1,
-        img: "../../public/images/715gsyCwlRL._AC_UF1000,1000_QL80_.jpg",
+        img: "/images/715gsyCwlRL._AC_UF1000,1000_QL80_.jpg",
     },
     {
         id: 2,
-        img: "../../public/images/Our+Top+10+Favorite+Books+About+International+History+and+Culture.webp",
+        img: "/images/Our+Top+10+Favorite+Books+About+International+History+and+Culture.webp",
     },
     {
         id: 3,
-        img: "../../public/images/bangla-book.jpg",
+        img: "/images/bangla-book.jpg",
     },
     {
         id: 4,
-        img: "../../public/images/1734305471900.png",
+        img: "/images/1734305471900.png",
     },
     {
         id: 5,
-        img: "../../public/images/1682684666671.png",
+        img: "/images/1682684666671.png",
     },
     {
         id: 6,
-        img: "../../public/images/images (1).jpg",
+        img: "/images/images (1).jpg",
     },
 ];
 
@@ -345,7 +333,7 @@ const WORK_LOCATION = {
                 {
                     id: 2,
                     name: "movieflixx.com",
-                    icon: "../../public/images/streaming.png",
+                    icon: "/images/streaming.png",
                     kind: "file",
                     fileType: "url",
                     href: "https://shadmanmovieflixx.netlify.app/",
@@ -411,7 +399,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "img",
                     position: "top-52 right-80",
-                    imageUrl: "../../public/images/travel.png",
+                    imageUrl: "/images/travel.png",
                 },
                 // {
                 //     id: 5,
@@ -441,7 +429,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
-            imageUrl: "../../public/images/B.jpg",
+            imageUrl: "/images/B.jpg",
         },
         {
             id: 2,
@@ -450,7 +438,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
-            imageUrl: "../../public/images/sh.jpg",
+            imageUrl: "/images/sh.jpg",
         },
         {
             id: 3,
@@ -469,7 +457,7 @@ const ABOUT_LOCATION = {
             fileType: "txt",
             position: "top-60 left-5",
             subtitle: "The Developer Behind the Project",
-            image: "../../public/images/team.jpg",
+            image: "/images/team.jpg",
             description: [
                 "We are a small team of passionate developers 😊 stepping into this industry with excitement and determination 😄. Although we are new to this field 🙂, we are fully committed to learning, growing, and improving every day 😌. This is our very first project as a team 😃, and we have given our best effort to make it meaningful and impactful 😇.We are looking forward to gaining more experience and building even better projects in the future 🤗",
             ],
@@ -548,7 +536,7 @@ const WINDOW_CONFIG = {
     note: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     tracker: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     news: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    
+
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

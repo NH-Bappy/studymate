@@ -13,23 +13,18 @@ const Contact = () => {
 
 
       <div className="p-5 space-y-5">
-        <div className="flex items-center gap-5">
-          <img
-            src="../../public/images/shadman.jpeg"
-            alt="shadman"
-            className="w-20 rounded-full"
-          />
-          <img
-            src="../../public/images/Bappy.png"
-            alt="Bappy"
-            className="w-20 rounded-full"
-          />
-        </div>
+
+        <img
+          src="/images/Bappy.png"
+          alt="Bappy"
+          className="w-20 rounded-full"
+        />
+
 
         <h3>Get in Touch with Our Team</h3>
         <p>Got an idea? A bug to squash? Or just wanna talk? I'm in.</p>
         <p>hnaimul302@gmail.com</p>
-        <p>shadmanshoumik25@gmail.com</p>
+
 
         <ul>
           {socials.map(({ id, bg, link, icon, text }) => (
@@ -52,6 +47,6 @@ const Contact = () => {
 }
 
 
-const ContactWindow = WindowWrapper(Contact , 'contact');
+const ContactWindow = WindowWrapper(Contact, 'contact');
 
 export default ContactWindow;
